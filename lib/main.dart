@@ -69,6 +69,7 @@ class HomePageState extends State<HomePage> {
                         "自作JVM (はりぼて)",
                         style: Theme.of(context).textTheme.headlineSmall,
                       ),
+                      const Text("ソースコード : https://github.com/yamader/djvm"),
                     ],
                   ),
                   ),
@@ -102,14 +103,36 @@ class HomePageState extends State<HomePage> {
                         title: const Text("クラスファイルの解析"),
                         content: Container(
                           alignment: Alignment.centerLeft,
-                          child: const Text("done"),
+                          child: Column(
+                            children: [
+                              const Image(image: AssetImage("assets/helloworld.png")),
+                              const Text("クラスファイルってこんなの"),
+                            ],
+                          ),
                         ),
                       ),
                       Step(
                         title: const Text("メソッドの情報の解析"),
                         content: Container(
                           alignment: Alignment.centerLeft,
-                          child: const Text("a"),
+                          child: Column(
+                            children: [
+                              const Image(image: AssetImage("assets/methods.png")),
+                              const Text("クラスファイルに含まれるメソッド一覧(とその内容)"),
+                            ],
+                          ),
+                        ),
+                      ),
+                      Step(
+                        title: const Text("コードの実行"),
+                        content: Container(
+                          alignment: Alignment.centerLeft,
+                          child: Column(
+                            children: [
+                              const Image(image: AssetImage("assets/code.png")),
+                              const Text("mainメソッドに含まれるコード"),
+                            ],
+                          ),
                         ),
                       ),
                     ],
