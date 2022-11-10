@@ -69,7 +69,21 @@ class HomePageState extends State<HomePage> {
                         "自作JVM (はりぼて)",
                         style: Theme.of(context).textTheme.headlineSmall,
                       ),
-                      const Text("ソースコード : https://github.com/yamader/djvm"),
+                      Row(
+                        children: [
+                          const Text("ソースコード : "),
+                          const SelectableText("https://github.com/yamader/djvm"),
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          const Text("→"),
+                          const SelectableText("/src.zip"),
+                          const Text("・"),
+                          const SelectableText("/src-web.zip"),
+                          const Text("←"),
+                        ],
+                      ),
                     ],
                   ),
                   ),
